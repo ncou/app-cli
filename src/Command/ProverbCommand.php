@@ -6,7 +6,7 @@ namespace App\Command;
 
 use Chiron\Console\AbstractCommand;
 use Chiron\Console\ExitCode;
-use App\Generator;
+use App\Sayings;
 
 final class ProverbCommand extends AbstractCommand
 {
@@ -17,13 +17,13 @@ final class ProverbCommand extends AbstractCommand
         $this->setDescription('Display a random proverb.');
     }
 
-    public function perform(Generator $generator): int
+    public function perform(Sayings $sayings): int
     {
-        $proverb = $generator->proverb();
+        $proverb = $sayings->proverb();
 
-        $this->info('Proverb of the day :');
         $this->newLine();
-        $this->sprintf('    ~~~ %s ~~~', $proverb);
+        $this->notice("    ~~ {$proverb} ~~");
+        $this->newLine();
 
         return ExitCode::OK;
     }

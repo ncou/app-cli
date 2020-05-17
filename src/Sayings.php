@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App;
 
-final class Generator
+/**
+ * Class used to select a random proverb.
+ */
+final class Sayings
 {
     private static $proverbs = [
         'Absence makes the heart grow fonder.',
@@ -19,7 +22,7 @@ final class Generator
         'Don\'t bite the hand that feeds you.',
         'Don\'t count your chickens before they hatch.',
         'Don\'t judge a book by its cover.',
-        'Don\t put all of your eggs in one basket.',
+        'Don\'t put all of your eggs in one basket.',
         'Don\'t put off until tomorrow what you can do today.',
         'Don\'t put too many irons in the fire.',
         'Fortune favors the bold.',
@@ -51,7 +54,7 @@ final class Generator
 
     public function proverb(): string
     {
-        // select a random proverb in the array.
+        // select a random proverb index in the array.
         $index = array_rand(static::$proverbs);
 
         return static::$proverbs[$index];
