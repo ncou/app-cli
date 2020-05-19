@@ -30,6 +30,9 @@
         }
     },
     "scripts": {
+        "post-create-project-cmd": [
+            "bash bin/chiron runtime -vv"
+        ],
         "test": "phpunit --colors=always"
     },
     "config": {
