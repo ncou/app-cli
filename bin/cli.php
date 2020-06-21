@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
+$autoload = dirname(__DIR__) . '/vendor/autoload.php';
 
-$app = Chiron\Application::init();
+if (! is_file($autoload)) {
+    die('You need to set up the project dependencies using Composer.');
+}
 
-/*
-$app = Chiron\Application::init([
-    'root' => __DIR__,
-]);
-*/
+require_once $autoload;
 
-$app->start();
+$paths = require_once dirname(__DIR__) . '/config/paths.php';
+$app = Chiron\Application::init($paths);
+$app->run();
