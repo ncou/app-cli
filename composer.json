@@ -13,7 +13,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "chiron/chiron": "^3.0"
+        "chiron/chiron": "^3.1"
     },
     "require-dev": {
         "chiron/container": "^3.4",
