@@ -2,4 +2,4 @@
 
 SET lib=%~dp0
 
-php "%lib%/cli.php" %*
+php "%lib%/../cli.php" %*
