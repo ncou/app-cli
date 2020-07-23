@@ -10,7 +10,6 @@ return [
     '@resources'    => '@root/resources/',
     '@runtime'      => '@root/runtime/',
     '@vendor'       => '@root/vendor/',
-    '@views'        => '@resources/views/',
     '@cache'        => '@runtime/cache/',
     '@logs'         => '@runtime/logs/',
 ];
