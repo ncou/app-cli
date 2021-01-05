@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use Chiron\Console\AbstractCommand;
+use Chiron\Core\Console\AbstractCommand;
 use App\PratchettQuotes;
 
 final class QuoteCommand extends AbstractCommand
