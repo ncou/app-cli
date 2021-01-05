@@ -5,7 +5,7 @@ If you do not have [Composer](http://getcomposer.org/), you may install it by fo
 You can then install this project template using the following command:
 
 ```bash
-$ composer create-project chiron/app [my-app-name]
+$ composer create-project chiron/app-cli [my-app-name]
 ```
 >Replace [my-app-name] with the desired directory name for your new application.
 
