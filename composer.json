@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {
@@ -31,7 +31,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit --colors=always"
+        "phpunit": "phpunit --colors=always"
     },
     "config": {
         "sort-packages": true

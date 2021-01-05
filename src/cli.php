@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 $currentDir = PHP_SAPI === 'cli' ? getcwd() : realpath(getcwd().'/../');
 
-require $currentDir . '/bootstrap/requirements.php';
-require $currentDir . '/vendor/autoload.php';
+require $currentDir . '../bootstrap/requirements.php';
+require $currentDir . '../vendor/autoload.php';
 
-$paths = require $currentDir . '/bootstrap/paths.php';
+$paths = require $currentDir . '../bootstrap/paths.php';
 $app = Chiron\Application::init($paths);
 
 exit($app->run());
