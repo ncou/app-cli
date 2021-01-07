@@ -2,12 +2,9 @@
 
 declare(strict_types=1);
 
-$currentDir = __DIR__;
+require __DIR__ . '/vendor/autoload.php';
 
-require $currentDir . '/bootstrap/requirements.php';
-require $currentDir . '/vendor/autoload.php';
-
-$paths = require $currentDir . '/bootstrap/paths.php';
+$paths = require __DIR__ . '/bootstrap/paths.php';
 $app = Chiron\Application::init($paths);
 
 exit($app->run());
