@@ -18,7 +18,7 @@ final class QuoteCommand extends AbstractCommand
 
     public function perform(PratchettQuotes $quotes): int
     {
-        $this->comment(sprintf("\n “%s”\n  ― Terry Pratchett", $quotes->random()));
+        $this->comment(sprintf("\n `%s`\n  - Terry Pratchett", $quotes->random()));
 
         return self::SUCCESS;
     }

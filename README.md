@@ -24,7 +24,7 @@ $ composer install                      # Install the projet composer dependenci
 To start application console execute:
 
 ```bash
-$ bin/app quote
+$ php app.php quote
 ```
 
 > This will generate a random quote from Terry Pratchett books. Read more about the quotes [here](https://bookriot.com/terry-pratchett-quotes/).
