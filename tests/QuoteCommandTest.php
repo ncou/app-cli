@@ -4,24 +4,24 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\Command\ProverbCommand;
+use App\Command\QuoteCommand;
 use Chiron\Container\Container;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class ListCommandTest extends TestCase
+class QuoteCommandTest extends TestCase
 {
-    public function testExecuteProverbCommand()
+    public function testExecuteQuoteCommand()
     {
-        $command = new ProverbCommand();
+        $command = new QuoteCommand();
         $command->setApplication(new Application());
         $command->setContainer(new Container());
 
         $commandTester = new CommandTester($command);
         $commandTester->execute(['command' => $command->getName()]);
 
-        $this->assertStringContainsString('~~', $commandTester->getDisplay());
+        $this->assertStringContainsString('Terry Pratchett', $commandTester->getDisplay());
     }
 
     // TODO : ajouter un test en utilisant l'Application::class et parcontre il faudra créer une méthode pour récupérer la command.
