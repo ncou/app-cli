@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
+use Chiron\Support\Arr;
+
 /**
  * Class used to select a random quote from Terry Pratchett books.
  */
@@ -45,8 +47,6 @@ final class PratchettQuotes
     public function random(): string
     {
         // Select a random index in the quotes array.
-        $index = array_rand(self::QUOTES);
-
-        return self::QUOTES[$index];
+        return Arr::random(self::QUOTES);
     }
 }
